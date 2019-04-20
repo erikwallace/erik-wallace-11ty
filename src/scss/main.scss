@@ -1,6 +1,69 @@
 @import '_variables';
 @import '_mixins';
 
+html {
+  background-color: #EFEFEF;
+  font-size: 1rem;
+  line-height: 1.5;
+//   max-width: 800px;
+//   margin: 30px auto;
+}
+
+body {
+  margin: 1.875rem auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 
+ * Adjacent sibling selector 
+ * Only add a margin between elements
+ */
+* + * {
+	margin-top: 1.5em;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.promo {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 0.75rem;
+  padding: 2rem 2rem;
+}
+
+.promo > *:first-child,
+.promo > *:first-child > *:first-child,
+.promo > *:first-child > *:first-child > *:last-child {
+	margin-top: 0;
+  border: 1px solid tomato;
+}
+
+p + p {
+  // margin-top: 0;
+  // text-indent: 2em;
+}
+
+ol > li,
+ul > li, {
+  margin-top: 0.75rem;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.2;
+}
+
+hr {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+/*
 * {
   margin: 0;
   padding: 0;
@@ -194,3 +257,4 @@ footer {
     border-bottom: solid 1px $text-color;
   }
 }
+*/
